@@ -15,6 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Películas y Series</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
@@ -22,22 +23,24 @@
     <h1>Mi Biblioteca de Películas y Series</h1>
 </header>
 
-<!-- Botón de recarga -->
-<div style="text-align: center; margin: 20px;">
-    <button onclick="reloadPage()" style="padding: 10px 20px; font-size: 16px;">Recargar Página</button>
-</div>
-
 <!-- Galería de Películas -->
 <section id="peliculas" class="gallery active">
     <div class="card">
-        <img src="https://image.tmdb.org/t/p/original/aQnbNiadeGzGSjWLaXyeNxpAUIx.jpg" alt="Película 1">
-        <p>Unbelievably</p>
+        <img src="https://image.tmdb.org/t/p/original/vUbVAT8CS6b4r7ZWQ6GpCj1qvGI.jpg" alt="La Colombiana">
+        <p>La Colombiana</p>
     </div>
     <div class="card">
-        <img src="https://image.tmdb.org/t/p/original/aQnbNiadeGzGSjWLaXyeNxpAUIx.jpg" alt="Película 2">
-        <p>La vida</p>
+        <img src="https://image.tmdb.org/t/p/original/9TFSqghEHrlBMRR63yTx80Orxva.jpg" alt="Deadpool">
+        <p>Deadpool</p>
     </div>
-    <!-- Añade más tarjetas de películas aquí -->
+    <div class="card">
+        <img src="https://image.tmdb.org/t/p/original/aQnbNiadeGzGSjWLaXyeNxpAUIx.jpg" alt="Unbelievably Vegan">
+        <p>Unbelievably Vegan with Chef Charity</p>
+    </div>
+    <div class="card">
+        <img src="https://image.tmdb.org/t/p/original/aQnbNiadeGzGSjWLaXyeNxpAUIx.jpg" alt="La vida secreta de los orangutanes">
+        <p>La vida secreta de los orangutanes</p>
+    </div>
 </section>
 
 <!-- Galería de Series -->
@@ -50,13 +53,22 @@
         <img src="https://image.tmdb.org/t/p/original/1DAIOEwzpbnphcIeTqStSF7JaQf.jpg" alt="Serie 2">
         <p>Serie de Ejemplo 2</p>
     </div>
-    <!-- Añade más tarjetas de series aquí -->
 </section>
 
 <!-- Barra de navegación -->
-<nav>
-    <button onclick="showSection('peliculas')" class="active">Películas</button>
-    <button onclick="showSection('series')">Series</button>
+<nav class="bottom-nav">
+    <button onclick="showSection('peliculas')" class="active">
+        <i class="fas fa-play-circle"></i>
+        <span>Películas</span>
+    </button>
+    <button onclick="showSection('series')">
+        <i class="fas fa-folder"></i>
+        <span>Series</span>
+    </button>
+    <button onclick="showSection('busqueda')">
+        <i class="fas fa-search"></i>
+        <span>Búsqueda</span>
+    </button>
 </nav>
 
 <script src="script.js"></script>
