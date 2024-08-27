@@ -1,22 +1,20 @@
-function showSection(sectionId) {
-    // Ocultar todas las secciones
-    var sections = document.querySelectorAll('section');
-    sections.forEach(function(section) {
-        section.classList.remove('active');
-    });
+// Manejar la navegación entre películas y series  
+document.getElementById('nav-movies').addEventListener('click', () => {  
+    document.getElementById('movies').style.display = 'grid';  
+    document.getElementById('series').style.display = 'none';  
+    setActiveNav('nav-movies');  
+});  
 
-    // Mostrar la sección seleccionada
-    var selectedSection = document.getElementById(sectionId);
-    selectedSection.classList.add('active');
+document.getElementById('nav-series').addEventListener('click', () => {  
+    document.getElementById('movies').style.display = 'none';  
+    document.getElementById('series').style.display = 'grid';  
+    setActiveNav('nav-series');  
+});  
 
-    // Actualizar los botones de navegación
-    var navButtons = document.querySelectorAll('.bottom-nav button');
-    navButtons.forEach(function(button) {
-        button.classList.remove('active');
-    });
-
-    var activeButton = document.querySelector('.bottom-nav button[onclick="showSection(\'' + sectionId + '\')"]');
-    if (activeButton) {
-        activeButton.classList.add('active');
-    }
+// Función para establecer el elemento de navegación activo  
+function setActiveNav(activeId) {  
+    document.querySelectorAll('.nav-item').forEach(nav => {  
+        nav.classList.remove('active');  
+    });  
+    document.getElementById(activeId).classList.add('active');  
 }
