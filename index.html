@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by Andres Garzon</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Películas y Series</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Mi Biblioteca de Películas y Series</h1>
+</header>
+
+<!-- Botón de recarga -->
+<div style="text-align: center; margin: 20px;">
+    <button onclick="reloadPage()" style="padding: 10px 20px; font-size: 16px;">Recargar Página</button>
+</div>
+
+<!-- Galería de Películas -->
+<section id="peliculas" class="gallery active">
+    <div class="card">
+        <img src="https://image.tmdb.org/t/p/original/aQnbNiadeGzGSjWLaXyeNxpAUIx.jpg" alt="Película 1">
+        <p>Unbelievably Vegan with Chef Charity</p>
+    </div>
+    <div class="card">
+        <img src="https://image.tmdb.org/t/p/original/aQnbNiadeGzGSjWLaXyeNxpAUIx.jpg" alt="Película 2">
+        <p>La vida secreta de los orangutanes</p>
+    </div>
+    <!-- Añade más tarjetas de películas aquí -->
+</section>
+
+<!-- Galería de Series -->
+<section id="series" class="gallery">
+    <div class="card">
+        <img src="https://image.tmdb.org/t/p/original/1DAIOEwzpbnphcIeTqStSF7JaQf.jpg" alt="Serie 1">
+        <p>Serie de Ejemplo</p>
+    </div>
+    <div class="card">
+        <img src="https://image.tmdb.org/t/p/original/1DAIOEwzpbnphcIeTqStSF7JaQf.jpg" alt="Serie 2">
+        <p>Serie de Ejemplo 2</p>
+    </div>
+    <!-- Añade más tarjetas de series aquí -->
+</section>
+
+<!-- Barra de navegación -->
+<nav>
+    <button onclick="showSection('peliculas')" class="active">Películas</button>
+    <button onclick="showSection('series')">Series</button>
+</nav>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
