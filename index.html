@@ -3,81 +3,39 @@
 <head>  
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Diseño de Películas y Series</title>  
+    <title>App de Series y Películas</title>  
     <link rel="stylesheet" href="styles.css">  
 </head>  
 <body>  
-    <div class="content">  
-        <div class="movie" id="movies">  
-            <div class="movie-item">  
-                <img src="https://image.tmdb.org/t/p/original/9TFSqghEHrlBMRR63yTx80Orxva.jpg" alt="Ajuste de cuentas">  
-                <div class="movie-title">Ajuste de cuentas</div>  
+    <header>  
+        <h1>Series y Películas</h1>  
+    </header>  
+    <main id="content">  
+        <div id="peliculas" class="grid">  
+            <div class="card">  
+                <img src="https://via.placeholder.com/200x300" alt="Ajuste de Cuentas">  
+                <h2>Ajuste de Cuentas</h2>  
             </div>  
-            <div class="movie-item">  
-                <img src="https://image.tmdb.org/t/p/original/9TFSqghEHrlBMRR63yTx80Orxva.jpg" alt="Harold y su crayon mágico">  
-                <div class="movie-title">Harold y su crayon mágico</div>  
-            </div>  
-            <div class="movie-item">  
-                <img src="https://image.tmdb.org/t/p/original/9TFSqghEHrlBMRR63yTx80Orxva.jpg" alt="Freddy's Fridays">  
-                <div class="movie-title">Freddy's Fridays</div>  
-            </div>  
-            <div class="movie-item">  
-                <img src="https://image.tmdb.org/t/p/original/9TFSqghEHrlBMRR63yTx80Orxva.jpg" alt="Boudica: Queen of War">  
-                <div class="movie-title">Boudica: Queen of War</div>  
-            </div>  
-            <div class="movie-item">  
-                <img src="https://image.tmdb.org/t/p/original/9TFSqghEHrlBMRR63yTx80Orxva.jpg" alt="Tipos de gentileza">  
-                <div class="movie-title">Tipos de gentileza</div>  
-            </div>  
-            <div class="movie-item">  
-                <img src="https://image.tmdb.org/t/p/original/9TFSqghEHrlBMRR63yTx80Orxva.jpg" alt="Place of Bones">  
-                <div class="movie-title">Place of Bones</div>  
-            </div>  
-            <div class="movie-item">  
-                <img src="https://image.tmdb.org/t/p/original/9TFSqghEHrlBMRR63yTx80Orxva.jpg" alt="Código Gerónimo">  
-                <div class="movie-title">Código Gerónimo</div>  
-            </div>  
-            <div class="movie-item">  
-                <img src="https://image.tmdb.org/t/p/original/9TFSqghEHrlBMRR63yTx80Orxva.jpg" alt="Colosio: El asesinato">  
-                <div class="movie-title">Colosio: El asesinato</div>  
-            </div>
-        </div>  
-        <div class="series" id="series" style="display: none;">  
-            <div class="movie-item">  
-                <img src="https://image.tmdb.org/t/p/original/437jZdGXmYzyl9p4QtIFsm89rL5.jpg" alt="Full House">  
-                <div class="movie-title">Full House</div>  
-            </div>  
-            <div class="movie-item">  
-                <img src="https://image.tmdb.org/t/p/original/437jZdGXmYzyl9p4QtIFsm89rL5.jpg" alt="La Rosario Tijeras">  
-                <div class="movie-title">La Rosario Tijeras</div>  
-            </div>  
-            <div class="movie-item">  
-                <img src="https://image.tmdb.org/t/p/original/437jZdGXmYzyl9p4QtIFsm89rL5.jpg" alt="Stranger Things">  
-                <div class="movie-title">Stranger Things</div>  
-            </div>  
-            <div class="movie-item">  
-                <img src="https://image.tmdb.org/t/p/original/437jZdGXmYzyl9p4QtIFsm89rL5.jpg" alt="Breaking Bad">  
-                <div class="movie-title">Breaking Bad</div>  
-            </div>  
-            <div class="movie-item">  
-                <img src="https://image.tmdb.org/t/p/original/437jZdGXmYzyl9p4QtIFsm89rL5.jpg" alt="Game of Thrones">  
-                <div class="movie-title">Game of Thrones</div>  
+            <div class="card">  
+                <img src="https://via.placeholder.com/200x300" alt="Harold y su Crayon Mágico">  
+                <h2>Harold y su Crayon Mágico</h2>  
             </div>  
         </div>  
-    </div>  
+        
+        <div id="series" class="grid" style="display: none;">  
+            <div class="card">  
+                <img src="https://via.placeholder.com/200x300" alt="Serie 1">  
+                <h2>Serie 1</h2>  
+            </div>  
+            <div class="card">  
+                <img src="https://via.placeholder.com/200x300" alt="Serie 2">  
+                <h2>Serie 2</h2>  
+            </div>  
+        </div>  
+    </main>  
     <nav class="navbar">  
-        <div class="nav-item" id="nav-movies">  
-            <img src="https://i.imgur.com/ZDq91lv.png" alt="Películas" width="24">  
-            <div>Películas</div>  
-        </div>  
-        <div class="nav-item" id="nav-series">  
-            <img src="https://i.imgur.com/z1xj4wV.png" alt="Series" width="24">  
-            <div>Series</div>  
-        </div>  
-        <div class="nav-item">  
-            <img src="https://i.imgur.com/06eWlVP.png" alt="Búsqueda" width="24">  
-            <div>Búsqueda</div>  
-        </div>  
+        <a href="#peliculas" class="nav-item active" id="peliculas-link">Películas</a>  
+        <a href="#series" class="nav-item" id="series-link">Series</a>  
     </nav>  
     <script src="script.js"></script>  
 </body>  
