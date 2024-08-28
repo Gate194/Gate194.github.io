@@ -1,66 +1,65 @@
 body {  
-    display: flex;  
-    flex-direction: column;  
-    min-height: 100vh;  
-    background-color: #121212;  
-    color: white;  
     font-family: Arial, sans-serif;  
+    background-color: #000;  
+    color: #fff;  
+    text-align: center;  
+    margin: 0;  
+    padding: 0;  
 }  
 
-.content {  
-    flex-grow: 1; /* Permite que la sección de contenido ocupe el espacio restante */  
-    padding-bottom: 60px; /* Espacio para la barra de navegación */  
-}  
-
-.movie, .series {  
-    display: grid;  
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  
-    gap: 10px;  
+header {  
     padding: 20px;  
 }  
 
-.movie-item {  
-    position: relative;  
+.grid {  
+    display: grid;  
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  
+    gap: 20px;  
+    padding: 20px;  
 }  
 
-.movie img, .series img {  
+.card {  
+    background-color: #444;  
+    border-radius: 10px;  
+    overflow: hidden;  
+    transition: transform 0.3s;  
+}  
+
+.card img {  
     width: 100%;  
     height: auto;  
-    border-radius: 8px;  
 }  
 
+.card h2 {  
+    margin: 10px 0;  
+}  
+
+.card:hover {  
+    transform: scale(1.05);  
+}  
+
+/* Estilos para la barra de navegación */  
 .navbar {  
-    position: fixed; /* Fija la barra de navegación en la parte inferior */  
-    bottom: 0;  
-    left: 0;  
-    right: 0;  
     display: flex;  
     justify-content: space-around;  
-    align-items: center;  
-    background-color: #1e1e1e;  
+    background-color: #222;  
     padding: 10px 0;  
-    z-index: 1000; /* Asegura que la barra esté por encima de otros elementos */  
+    position: fixed;  
+    bottom: 0;  
+    width: 100%;  
 }  
 
 .nav-item {  
-    text-align: center;  
-    color: #b0b0b0;  
-    position: relative;  
-    cursor: pointer; /* Cambia el cursor al pasar sobre el elemento */  
+    color: #ccc;  
+    text-decoration: none;  
+    font-size: 16px;  
 }  
 
 .nav-item.active {  
-    color: #8a2be2; /* Color para el texto activo */  
+    color: #fff;  
+    font-weight: bold;  
 }  
 
-.nav-item.active::after {  
-    content: '';  
-    position: absolute;  
-    bottom: -5px;  
-    left: 50%;  
-    transform: translateX(-50%);  
-    width: 40px;  
-    height: 4px;  
-    background-color: #8a2be2; /* Color de la barra activa */  
-    border-radius: 2px;  
+.nav-item:hover {  
+    color: #fff;  
 }
