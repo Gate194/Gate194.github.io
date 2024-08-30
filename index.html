@@ -18,26 +18,47 @@
 </head>
 <body>
     <div class="navbar">
-        <a id="peliculas-tab" onclick="showSection('peliculas')">Películas</a>
-        <a id="series-tab" onclick="showSection('series')">Series</a>
+        <a id="inicio-tab" onclick="showSection('inicio')">
+            <img src="inicio.png" alt="Inicio">
+            <span>Inicio</span>
+        </a>
+        <a id="peliculas-tab" onclick="showSection('peliculas')">
+            <img src="play.png" alt="Películas">
+            <span>Películas</span>
+        </a>
+        <a id="series-tab" onclick="showSection('series')">
+            <img src="carpeta.png" alt="Series">
+            <span>Series</span>
+        </a>
+        <a id="fichas-tab" onclick="showSection('fichas')">
+            <img src="fichas.png" alt="Mis fichas">
+            <span>Mis fichas</span>
+        </a>
+        <a id="busqueda-tab" onclick="showSection('busqueda')">
+            <img src="busqueda.png" alt="Búsqueda">
+            <span>Búsqueda</span>
+        </a>
     </div>
 
     <!-- Sección de Películas -->
     <div id="peliculas" class="container active">
-        <div class="item">
-            <img src="la_colombiana.jpg" alt="La Colombiana">
-            <h3>La Colombiana</h3>
+        <div class="gallery">
+            <div class="item">
+                <img src="ajuste_de_cuentas.jpg" alt="Ajuste de Cuentas">
+            </div>
+            <div class="item">
+                <img src="harold_crayon.jpg" alt="Harold y su Crayon Mágico">
+            </div>
+            <div class="item">
+                <img src="freddys_fridays.jpg" alt="Freddy's Fridays">
+            </div>
+            <!-- Añade más películas según necesites -->
         </div>
-        <!-- Más películas -->
     </div>
 
     <!-- Sección de Series -->
     <div id="series" class="container">
-        <div class="item">
-            <img src="full_house.jpg" alt="Full House">
-            <h3>Full House</h3>
-        </div>
-        <!-- Más series -->
+        <!-- Aquí añadirías los elementos de la galería para las series -->
     </div>
 
     <script src="script.js"></script>
