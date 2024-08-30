@@ -8,52 +8,89 @@
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Películas y Series</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="navbar">
-        <a id="peliculas-tab" onclick="showSection('peliculas')">
-            <img src="https://i.imgur.com/ZDq91lv.png" alt="Películas">
-            <span>Películas</span>
-        </a>
-        <a id="series-tab" onclick="showSection('series')">
-            <img src="https://i.imgur.com/z1xj4wV.png" alt="Series">
-            <span>Series</span>
-        </a>
-        <a id="busqueda-tab" onclick="showSection('busqueda')">
-            <img src="https://i.imgur.com/06eWlVP.png" alt="Búsqueda">
-            <span>Búsqueda</span>
-        </a>
-    </div>
-
-    <!-- Sección de Películas -->
-    <div id="peliculas" class="container active">
-        <div class="gallery">
-            <div class="item">
-                <img src="https://image.tmdb.org/t/p/original/vUbVAT8CS6b4r7ZWQ6GpCj1qvGI.jpg" alt="La Colombiana">
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Diseño de Películas y Series</title>  
+    <link rel="stylesheet" href="styles.css">  
+</head>  
+<body>  
+    <div class="content">  
+        <div class="movie" id="movies">  
+            <div class="movie-item">  
+                <img src="https://image.tmdb.org/t/p/original/9TFSqghEHrlBMRR63yTx80Orxva.jpg" alt="Ajuste de cuentas">  
+                <div class="movie-title">Ajuste de cuentas</div>  
+            </div>  
+            <div class="movie-item">  
+                <img src="https://image.tmdb.org/t/p/original/9TFSqghEHrlBMRR63yTx80Orxva.jpg" alt="Harold y su crayon mágico">  
+                <div class="movie-title">Harold y su crayon mágico</div>  
+            </div>  
+            <div class="movie-item">  
+                <img src="https://image.tmdb.org/t/p/original/9TFSqghEHrlBMRR63yTx80Orxva.jpg" alt="Freddy's Fridays">  
+                <div class="movie-title">Freddy's Fridays</div>  
+            </div>  
+            <div class="movie-item">  
+                <img src="https://image.tmdb.org/t/p/original/9TFSqghEHrlBMRR63yTx80Orxva.jpg" alt="Boudica: Queen of War">  
+                <div class="movie-title">Boudica: Queen of War</div>  
+            </div>  
+            <div class="movie-item">  
+                <img src="https://image.tmdb.org/t/p/original/9TFSqghEHrlBMRR63yTx80Orxva.jpg" alt="Tipos de gentileza">  
+                <div class="movie-title">Tipos de gentileza</div>  
+            </div>  
+            <div class="movie-item">  
+                <img src="https://image.tmdb.org/t/p/original/9TFSqghEHrlBMRR63yTx80Orxva.jpg" alt="Place of Bones">  
+                <div class="movie-title">Place of Bones</div>  
+            </div>  
+            <div class="movie-item">  
+                <img src="https://image.tmdb.org/t/p/original/9TFSqghEHrlBMRR63yTx80Orxva.jpg" alt="Código Gerónimo">  
+                <div class="movie-title">Código Gerónimo</div>  
+            </div>  
+            <div class="movie-item">  
+                <img src="https://image.tmdb.org/t/p/original/9TFSqghEHrlBMRR63yTx80Orxva.jpg" alt="Colosio: El asesinato">  
+                <div class="movie-title">Colosio: El asesinato</div>  
             </div>
-            <!-- Añade más películas según necesites -->
-        </div>
-    </div>
-
-    <!-- Sección de Series -->
-    <div id="series" class="container">
-        <div class="gallery">
-            <div class="item">
-                <img src="https://image.tmdb.org/t/p/original/437jZdGXmYzyl9p4QtIFsm89rL5.jpg" alt="Full House">
-            </div>
-            <!-- Añade más series según necesites -->
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
+        </div>  
+        <div class="series" id="series" style="display: none;">  
+            <div class="movie-item">  
+                <img src="https://image.tmdb.org/t/p/original/437jZdGXmYzyl9p4QtIFsm89rL5.jpg" alt="Full House">  
+                <div class="movie-title">Full House</div>  
+            </div>  
+            <div class="movie-item">  
+                <img src="https://image.tmdb.org/t/p/original/437jZdGXmYzyl9p4QtIFsm89rL5.jpg" alt="La Rosario Tijeras">  
+                <div class="movie-title">La Rosario Tijeras</div>  
+            </div>  
+            <div class="movie-item">  
+                <img src="https://image.tmdb.org/t/p/original/437jZdGXmYzyl9p4QtIFsm89rL5.jpg" alt="Stranger Things">  
+                <div class="movie-title">Stranger Things</div>  
+            </div>  
+            <div class="movie-item">  
+                <img src="https://image.tmdb.org/t/p/original/437jZdGXmYzyl9p4QtIFsm89rL5.jpg" alt="Breaking Bad">  
+                <div class="movie-title">Breaking Bad</div>  
+            </div>  
+            <div class="movie-item">  
+                <img src="https://image.tmdb.org/t/p/original/437jZdGXmYzyl9p4QtIFsm89rL5.jpg" alt="Game of Thrones">  
+                <div class="movie-title">Game of Thrones</div>  
+            </div>  
+        </div>  
+    </div>  
+    <nav class="navbar">  
+        <div class="nav-item" id="nav-movies">  
+            <img src="https://i.imgur.com/ZDq91lv.png" alt="Películas" width="24">  
+            <div>Películas</div>  
+        </div>  
+        <div class="nav-item" id="nav-series">  
+            <img src="https://i.imgur.com/z1xj4wV.png" alt="Series" width="24">  
+            <div>Series</div>  
+        </div>  
+        <div class="nav-item">  
+            <img src="https://i.imgur.com/06eWlVP.png" alt="Búsqueda" width="24">  
+            <div>Búsqueda</div>  
+        </div>  
+    </nav>  
+    <script src="script.js"></script>  
+</body>  
 </html>
 <!-- partial -->
   <script  src="./script.js"></script>

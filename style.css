@@ -1,61 +1,66 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
+body {  
+    display: flex;  
+    flex-direction: column;  
+    min-height: 100vh;  
+    background-color: #121212;  
+    color: white;  
+    font-family: Arial, sans-serif;  
+}  
 
-.navbar {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    background-color: #333333;
-    padding: 10px 0;
-    position: absolute;
-    bottom: 0;
-}
+.content {  
+    flex-grow: 1; /* Permite que la sección de contenido ocupe el espacio restante */  
+    padding-bottom: 60px; /* Espacio para la barra de navegación */  
+}  
 
-.navbar a {
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    padding: 10px;
-    font-size: 14px;
-    cursor: pointer;
-}
+.movie, .series {  
+    display: grid;  
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  
+    gap: 10px;  
+    padding: 20px;  
+}  
 
-.navbar a img {
-    width: 24px;
-    height: 24px;
-    display: block;
-    margin: 0 auto 5px;
-}
+.movie-item {  
+    position: relative;  
+}  
 
-.container {
-    display: none; /* Oculto por defecto */
-    padding: 20px;
-    flex: 1; /* Ocupa el espacio disponible */
-}
+.movie img, .series img {  
+    width: 100%;  
+    height: auto;  
+    border-radius: 8px;  
+}  
 
-.container.active {
-    display: block; /* Mostrar cuando esté activo */
-}
+.navbar {  
+    position: fixed; /* Fija la barra de navegación en la parte inferior */  
+    bottom: 0;  
+    left: 0;  
+    right: 0;  
+    display: flex;  
+    justify-content: space-around;  
+    align-items: center;  
+    background-color: #1e1e1e;  
+    padding: 10px 0;  
+    z-index: 1000; /* Asegura que la barra esté por encima de otros elementos */  
+}  
 
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
+.nav-item {  
+    text-align: center;  
+    color: #b0b0b0;  
+    position: relative;  
+    cursor: pointer; /* Cambia el cursor al pasar sobre el elemento */  
+}  
 
-.item {
-    width: 200px;
-}
+.nav-item.active {  
+    color: #8a2be2; /* Color para el texto activo */  
+}  
 
-.item img {
-    width: 100%;
-    border-radius: 10px;
+.nav-item.active::after {  
+    content: '';  
+    position: absolute;  
+    bottom: -5px;  
+    left: 50%;  
+    transform: translateX(-50%);  
+    width: 40px;  
+    height: 4px;  
+    background-color: #8a2be2; /* Color de la barra activa */  
+    border-radius: 2px;  
 }
