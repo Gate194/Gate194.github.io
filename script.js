@@ -8,11 +8,11 @@ function showSection(sectionId) {
     document.getElementById(sectionId).classList.add('active');
 }
 
-function showDetails(title, description) {
+function showDetails(title, description, imageUrl) {
     // Mostrar la sección de detalles
     showSection('detalles');
-    // Añadir título y descripción
-    document.getElementById('titulo').innerText = title;
+    // Añadir imagen, título y descripción
+    document.getElementById('detalle-imagen').src = imageUrl;
     document.getElementById('descripcion').innerText = description;
 }
 
