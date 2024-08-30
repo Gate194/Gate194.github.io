@@ -4,6 +4,9 @@ body {
     color: #ffffff;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 .navbar {
@@ -12,6 +15,8 @@ body {
     justify-content: space-around;
     background-color: #333333;
     padding: 10px 0;
+    position: absolute;
+    bottom: 0;
 }
 
 .navbar a {
@@ -33,6 +38,7 @@ body {
 .container {
     display: none; /* Oculto por defecto */
     padding: 20px;
+    flex: 1; /* Ocupa el espacio disponible */
 }
 
 .container.active {
