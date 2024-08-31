@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Untitled</title>
+  <title>CodePen - Peliculas y Series</title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
@@ -35,7 +35,7 @@
     <!-- Sección de Películas -->
     <div id="peliculas" class="container active">
         <div class="gallery">
-            <div class="item" onclick="showDetails('La Colombiana', 'Descripción de la película La Colombiana.', 'https://image.tmdb.org/t/p/original/2PlRuZUjqC58bqm6MOjOAraEdFA.jpg')">
+            <div class="item" onclick="showDetails('La Colombiana', 'Descripción de la película La Colombiana.', 'https://image.tmdb.org/t/p/original/2PlRuZUjqC58bqm6MOjOAraEdFA.jpg', 'https://image.tmdb.org/t/p/original/bx1Ka8DE0SDxJJHXOHmGICVr6ol.png', false)">
                 <img src="https://image.tmdb.org/t/p/original/vUbVAT8CS6b4r7ZWQ6GpCj1qvGI.jpg" alt="La Colombiana">
             </div>
             <!-- Añade más películas según necesites -->
@@ -45,7 +45,10 @@
     <!-- Sección de Series -->
     <div id="series" class="container">
         <div class="gallery">
-            <div class="item" onclick="showDetails('Full House', 'Descripción de la serie Full House.', 'https://image.tmdb.org/t/p/original/2PlRuZUjqC58bqm6MOjOAraEdFA.jpg')">
+            <div class="item" onclick="showDetails('Full House', 'Descripción de la serie Full House.', 'https://image.tmdb.org/t/p/original/fAUZbXgPDirrt2IApLNDsca5O5B.jpg', 'https://image.tmdb.org/t/p/original/uMFvvQYCYaDD4j6GMiobUj0y4Ws.png', true, [
+                { nombre: 'Temporada 1', imagen: 'https://image.tmdb.org/t/p/original/62X8zmUNowcZfxS2yUUWdhK9iaf.jpg' },
+                { nombre: 'Temporada 2', imagen: 'https://image.tmdb.org/t/p/original/prm07DoL36a5UZA2XlHX9OuI19D.jpg' }
+            ])">
                 <img src="https://image.tmdb.org/t/p/original/437jZdGXmYzyl9p4QtIFsm89rL5.jpg" alt="Full House">
             </div>
             <!-- Añade más series según necesites -->
@@ -56,9 +59,10 @@
     <div id="detalles" class="container">
         <div class="detalle-content">
             <img id="detalle-imagen" src="" alt="Detalle Imagen" class="detalle-imagen">
-            <img id="logo" src="https://image.tmdb.org/t/p/original/bx1Ka8DE0SDxJJHXOHmGICVr6ol.png" alt="Logo" class="logo">
+            <img id="logo" src="" alt="Logo" class="logo">
             <p id="descripcion"></p>
-            <button onclick="reproducir()">Reproducir</button>
+            <button id="reproducir-btn" onclick="reproducir()">Reproducir</button>
+            <div id="temporadas" class="temporadas"></div>
         </div>
     </div>
 
