@@ -35,7 +35,7 @@
     <!-- Sección de Películas -->
     <div id="peliculas" class="container active">
         <div class="gallery">
-            <div class="item" onclick="showDetails('La Colombiana', 'Descripción de la película La Colombiana.', 'https://image.tmdb.org/t/p/original/2PlRuZUjqC58bqm6MOjOAraEdFA.jpg', 'https://image.tmdb.org/t/p/original/bx1Ka8DE0SDxJJHXOHmGICVr6ol.png', false)">
+            <div class="item" onclick="showDetails('La Colombiana', 'Descripción de la película La Colombiana.', 'https://image.tmdb.org/t/p/original/2PlRuZUjqC58bqm6MOjOAraEdFA.jpg', 'https://image.tmdb.org/t/p/original/bx1Ka8DE0SDxJJHXOHmGICVr6ol.png')">
                 <img src="https://image.tmdb.org/t/p/original/vUbVAT8CS6b4r7ZWQ6GpCj1qvGI.jpg" alt="La Colombiana">
             </div>
             <!-- Añade más películas según necesites -->
@@ -45,9 +45,9 @@
     <!-- Sección de Series -->
     <div id="series" class="container">
         <div class="gallery">
-            <div class="item" onclick="showDetails('Full House', 'Descripción de la serie Full House.', 'https://image.tmdb.org/t/p/original/fAUZbXgPDirrt2IApLNDsca5O5B.jpg', 'https://image.tmdb.org/t/p/original/uMFvvQYCYaDD4j6GMiobUj0y4Ws.png', true, [
-                { nombre: 'Temporada 1', imagen: 'https://image.tmdb.org/t/p/original/62X8zmUNowcZfxS2yUUWdhK9iaf.jpg' },
-                { nombre: 'Temporada 2', imagen: 'https://image.tmdb.org/t/p/original/prm07DoL36a5UZA2XlHX9OuI19D.jpg' }
+            <div class="item" onclick="showDetails('Full House', 'Descripción de la serie Full House.', 'https://image.tmdb.org/t/p/original/fAUZbXgPDirrt2IApLNDsca5O5B.jpg', 'https://image.tmdb.org/t/p/original/uMFvvQYCYaDD4j6GMiobUj0y4Ws.png', [
+                { number: 1, imageUrl: 'https://image.tmdb.org/t/p/original/1T1Fu3yKzHLSj2OcrdY2U7W4hOM.jpg' },
+                { number: 2, imageUrl: 'https://image.tmdb.org/t/p/original/prm07DoL36a5UZA2XlHX9OuI19D.jpg' }
             ])">
                 <img src="https://image.tmdb.org/t/p/original/437jZdGXmYzyl9p4QtIFsm89rL5.jpg" alt="Full House">
             </div>
@@ -61,8 +61,8 @@
             <img id="detalle-imagen" src="" alt="Detalle Imagen" class="detalle-imagen">
             <img id="logo" src="" alt="Logo" class="logo">
             <p id="descripcion"></p>
-            <button id="reproducir-btn" onclick="reproducir()">Reproducir</button>
-            <div id="temporadas" class="temporadas"></div>
+            <div id="temporadas" class="temporadas"></div> <!-- Sección de temporadas -->
+            <button id="reproducir-boton" onclick="reproducir()">Reproducir</button>
         </div>
     </div>
 

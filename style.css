@@ -67,7 +67,7 @@ body {
     display: none;
     text-align: center;
     overflow: auto; /* Permitir el desplazamiento dentro del contenedor de detalles */
-    padding-bottom: 80px; /* Añadir espacio al final para evitar que el contenido quede oculto detrás de la barra de navegación */
+    padding-bottom: 80px; /* Espacio para evitar que el contenido quede oculto detrás de la barra de navegación */
 }
 
 #detalles.active {
@@ -104,16 +104,29 @@ button {
     font-size: 16px;
 }
 
+#reproducir-boton {
+    display: block; /* Mostrar por defecto */
+}
+
+#detalles.series #reproducir-boton {
+    display: none; /* Ocultar en la sección de detalles para series */
+}
+
 .temporadas {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 10px;
     justify-content: center;
 }
 
-.temporada-contenedor {
-    text-align: center;
+.temporada-card {
+    background-color: #333333;
+    border-radius: 10px;
+    overflow: hidden;
     width: 200px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .temporada-imagen {
@@ -124,6 +137,7 @@ button {
 .temporada-nombre {
     margin-top: 5px;
     font-size: 16px;
+    color: #ffffff;
 }
 
 /* Asegura que la página pueda desplazarse verticalmente si es necesario */
