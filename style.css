@@ -189,11 +189,11 @@ html, body {
     }
 
     .detalle-content .logo {
-        max-width: 400px; /* Aumenta el tamaño del logo en pantallas grandes */
+        max-width: 200px; /* Aumenta el tamaño del logo en pantallas grandes */
     }
 
     .item, .temporada-card {
-        width: 250px; /* Aumenta el tamaño de las tarjetas en pantallas grandes */
+        width: 125px; /* Aumenta el tamaño de las tarjetas en pantallas grandes */
     }
 
     button {
