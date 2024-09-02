@@ -84,7 +84,7 @@ body {
 .carrusel {
     position: relative;
     width: 10%;
-    max-width: 45%;
+    max-width: 20%;
     overflow: hidden;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -96,7 +96,7 @@ body {
 }
 
 .detalle-imagen {
-    min-width: 100%;
+    min-width: 10%;
     height: 10%;
     border-radius: 10px;
 }
