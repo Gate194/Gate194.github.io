@@ -81,44 +81,43 @@ body {
     text-align: center;
 }
 
-.carrusel {
+.carousel {
     position: relative;
-    width: 100%;
-    max-width: 45%;
-    overflow: hidden;
+    max-width: 500px;
     margin-bottom: 20px;
+    overflow: hidden;
     border-radius: 10px;
 }
 
-.detalle-imagenes {
+.carousel-images {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease;
 }
 
-.detalle-imagen {
+.carousel-images img {
     min-width: 100%;
-    height: 300px;
-    border-radius: 10px;
+    height: 280px;
 }
 
-.carrusel-btn {
+.carousel-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
-    border: none;
     color: white;
+    border: none;
     padding: 10px;
     cursor: pointer;
-    z-index: 1;
     border-radius: 50%;
+    font-size: 18px;
+    z-index: 2;
 }
 
-.prev-btn {
+.left-btn {
     left: 10px;
 }
 
-.next-btn {
+.right-btn {
     right: 10px;
 }
 
