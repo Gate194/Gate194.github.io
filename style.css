@@ -99,27 +99,6 @@ body {
     height: 320px;
 }
 
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: 18px;
-    z-index: 2;
-}
-
-.left-btn {
-    left: 10px;
-}
-
-.right-btn {
-    right: 10px;
-}
 
 .logo {
     max-width: 250px;
@@ -153,13 +132,13 @@ button {
 }
 
 .temporada-card {
-    background-color: #333333;
+    background-color: #121212;
     border-radius: 10px;
     overflow: hidden;
     width: 200px;
     text-align: center;
     padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
 }
 
 .temporada-imagen {
