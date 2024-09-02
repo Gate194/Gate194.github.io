@@ -83,8 +83,8 @@ body {
 
 .carrusel {
     position: relative;
-    width: 100%;
-    max-width: 45%;
+    width: 10%;
+    max-width: 20%;
     overflow: hidden;
     margin-bottom: 20px;
     border-radius: 10px;
