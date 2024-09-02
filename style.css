@@ -181,23 +181,3 @@ html, body {
     margin: 0;
     padding: 0;
 }
-
-/* Media query para pantallas grandes, como televisores */
-@media (min-width: 1920px) {
-    .carousel {
-        max-width: 400px; /* Aumenta el tamaño del carrusel en pantallas grandes */
-    }
-
-    .detalle-content .logo {
-        max-width: 200px; /* Aumenta el tamaño del logo en pantallas grandes */
-    }
-
-    .item, .temporada-card {
-        width: 125px; /* Aumenta el tamaño de las tarjetas en pantallas grandes */
-    }
-
-    button {
-        font-size: 18px; /* Aumenta el tamaño de fuente en los botones */
-        padding: 12px 24px; /* Aumenta el tamaño del padding en los botones */
-    }
-}
