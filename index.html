@@ -35,24 +35,10 @@
     <!-- Sección de Películas -->
     <div id="peliculas" class="container active">
         <div class="gallery">
-            <div class="item" onclick="showDetails('La Colombiana', 'Descripción de la película La Colombiana.', 'https://image.tmdb.org/t/p/original/2PlRuZUjqC58bqm6MOjOAraEdFA.jpg', 'https://image.tmdb.org/t/p/original/bx1Ka8DE0SDxJJHXOHmGICVr6ol.png', [], [
-                'https://image.tmdb.org/t/p/original/kG7xLUDHfmxK5vkowFRCCeR09Ld.jpg',
-                'https://image.tmdb.org/t/p/original/kG7xLUDHfmxK5vkowFRCCeR09Ld.jpg'
-            ])">
+            <div class="item" onclick="showDetails('La Colombiana', 'Descripción de la película La Colombiana.', 'https://image.tmdb.org/t/p/original/2PlRuZUjqC58bqm6MOjOAraEdFA.jpg', 'https://image.tmdb.org/t/p/original/bx1Ka8DE0SDxJJHXOHmGICVr6ol.png')">
                 <img src="https://image.tmdb.org/t/p/original/vUbVAT8CS6b4r7ZWQ6GpCj1qvGI.jpg" alt="La Colombiana">
             </div>
-            <div class="item" onclick="showDetails('Venom', 'Descripción de la película Venom.', 'https://image.tmdb.org/t/p/original/2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg', 'https://image.tmdb.org/t/p/original/bx1Ka8DE0SDxJJHXOHmGICVr6ol.png', [], [
-                'https://image.tmdb.org/t/p/original/2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg',
-                'https://image.tmdb.org/t/p/original/8HFmTMlcohdD5FIB0F5TQ5WiBqR.jpg'
-            ])">
-                <img src="https://image.tmdb.org/t/p/original/2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg" alt="Venom">
-            </div>
-            <div class="item" onclick="showDetails('Venom', 'Descripción de la película Venom.', 'https://image.tmdb.org/t/p/original/2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg', 'https://image.tmdb.org/t/p/original/bx1Ka8DE0SDxJJHXOHmGICVr6ol.png', [], [
-                'https://image.tmdb.org/t/p/original/2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg',
-                'https://image.tmdb.org/t/p/original/8HFmTMlcohdD5FIB0F5TQ5WiBqR.jpg'
-            ])">
-                <img src="https://image.tmdb.org/t/p/original/2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg" alt="Venom">
-              </div>
+            <!-- Añade más películas según necesites -->
         </div>
     </div>
 
@@ -62,9 +48,6 @@
             <div class="item" onclick="showDetails('Full House', 'Descripción de la serie Full House.', 'https://image.tmdb.org/t/p/original/fAUZbXgPDirrt2IApLNDsca5O5B.jpg', 'https://image.tmdb.org/t/p/original/uMFvvQYCYaDD4j6GMiobUj0y4Ws.png', [
                 { number: 1, imageUrl: 'https://image.tmdb.org/t/p/original/jA6d41pRiHcI78NG93ENdMYPexv.jpg' },
                 { number: 2, imageUrl: 'https://image.tmdb.org/t/p/original/prm07DoL36a5UZA2XlHX9OuI19D.jpg' }
-            ], [
-                'https://image.tmdb.org/t/p/original/kG7xLUDHfmxK5vkowFRCCeR09Ld.jpg',
-                'https://image.tmdb.org/t/p/original/kG7xLUDHfmxK5vkowFRCCeR09Ld.jpg'
             ])">
                 <img src="https://image.tmdb.org/t/p/original/437jZdGXmYzyl9p4QtIFsm89rL5.jpg" alt="Full House">
             </div>
@@ -75,13 +58,7 @@
     <!-- Sección de Detalles -->
     <div id="detalles" class="container">
         <div class="detalle-content">
-            <div class="carousel">
-                <button class="carousel-btn left-btn" onclick="moveSlide(-1)">&#10094;</button>
-                <div class="carousel-images">
-                    <img id="detalle-imagen" src="" alt="Detalle Imagen" class="detalle-imagen">
-                </div>
-                <button class="carousel-btn right-btn" onclick="moveSlide(1)">&#10095;</button>
-            </div>
+            <img id="detalle-imagen" src="" alt="Detalle Imagen" class="detalle-imagen">
             <img id="logo" src="" alt="Logo" class="logo">
             <p id="descripcion"></p>
             <div id="temporadas" class="temporadas"></div> <!-- Sección de temporadas -->
