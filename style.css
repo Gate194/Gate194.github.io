@@ -185,7 +185,7 @@ html, body {
 /* Media query para pantallas grandes, como televisores */
 @media (min-width: 1920px) {
     .carousel {
-        max-width: 800px; /* Aumenta el tamaño del carrusel en pantallas grandes */
+        max-width: 400px; /* Aumenta el tamaño del carrusel en pantallas grandes */
     }
 
     .detalle-content .logo {
