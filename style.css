@@ -81,11 +81,44 @@ body {
     text-align: center;
 }
 
-.detalle-imagen {
-    max-width: 45%;
-    height: auto;
+.carousel {
+    position: relative;
+    max-width: 500px;
     margin-bottom: 20px;
+    overflow: hidden;
     border-radius: 10px;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-images img {
+    min-width: 100%;
+    height: auto;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+    z-index: 2;
+}
+
+.left-btn {
+    left: 10px;
+}
+
+.right-btn {
+    right: 10px;
 }
 
 .logo {
