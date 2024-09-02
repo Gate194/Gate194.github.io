@@ -1,5 +1,3 @@
-let currentImageIndex = 0;
-
 function showSection(sectionId) {
     // Ocultar todas las secciones
     document.getElementById('peliculas').classList.remove('active');
@@ -10,29 +8,16 @@ function showSection(sectionId) {
     document.getElementById(sectionId).classList.add('active');
 }
 
-function showDetails(title, description, imageUrls, logoUrl, seasons = []) {
+function showDetails(title, description, imageUrl, logoUrl, seasons = []) {
+    // Mostrar la sección de detalles
     showSection('detalles');
-
-    // Configurar logo y descripción
+    
+    // Añadir imagen, título, descripción y logo
+    document.getElementById('detalle-imagen').src = imageUrl;
     document.getElementById('logo').src = logoUrl;
     document.getElementById('descripcion').innerText = description;
 
-    // Configurar las imágenes del carrusel
-    const detalleImagenes = document.getElementById('detalle-imagenes');
-    detalleImagenes.innerHTML = ''; // Limpiar imágenes anteriores
-
-    imageUrls.forEach(url => {
-        const img = document.createElement('img');
-        img.src = url;
-        img.alt = title;
-        img.className = 'detalle-imagen';
-        detalleImagenes.appendChild(img);
-    });
-
-    currentImageIndex = 0;
-    updateCarrusel();
-
-    // Configurar temporadas
+    // Añadir las temporadas
     const temporadasContainer = document.getElementById('temporadas');
     temporadasContainer.innerHTML = ''; // Limpiar el contenedor de temporadas
     seasons.forEach(season => {
@@ -53,40 +38,15 @@ function showDetails(title, description, imageUrls, logoUrl, seasons = []) {
         temporadasContainer.appendChild(card);
     });
 
+    // Mostrar u ocultar el botón de reproducir según el tipo de contenido
     const botonReproducir = document.getElementById('reproducir-boton');
-    if (seasons.length > 0) { 
+    if (seasons.length > 0) { // Si hay temporadas, es una serie
         botonReproducir.style.display = 'none';
         document.getElementById('detalles').classList.add('series');
     } else {
         botonReproducir.style.display = 'block';
         document.getElementById('detalles').classList.remove('series');
     }
-}
-
-function updateCarrusel() {
-    const detalleImagenes = document.getElementById('detalle-imagenes');
-    const offset = -currentImageIndex * 100;
-    detalleImagenes.style.transform = `translateX(${offset}%)`;
-}
-
-function prevImage() {
-    const imageCount = document.querySelectorAll('.detalle-imagen').length;
-    if (currentImageIndex > 0) {
-        currentImageIndex--;
-    } else {
-        currentImageIndex = imageCount - 1;
-    }
-    updateCarrusel();
-}
-
-function nextImage() {
-    const imageCount = document.querySelectorAll('.detalle-imagen').length;
-    if (currentImageIndex < imageCount - 1) {
-        currentImageIndex++;
-    } else {
-        currentImageIndex = 0;
-    }
-    updateCarrusel();
 }
 
 function reproducir() {
