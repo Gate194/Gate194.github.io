@@ -2,123 +2,84 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Untitled</title>
-  <link rel="stylesheet" href="./style.css">
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
   <title>CodePen - Peliculas y Series</title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>CodePen - Peliculas y Series</title>
-  <link rel="stylesheet" href="./style.css">
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Películas y Series</title>  
+    <link rel="stylesheet" href="styles.css">  
+</head>  
+<body>  
+    <div class="navbar">  
+        <a id="peliculas-tab" onclick="showSection('peliculas')">  
+            <img src="https://i.imgur.com/ZDq91lv.png" alt="Películas">  
+            <span>Películas</span>  
+        </a>  
+        <a id="series-tab" onclick="showSection('series')">  
+            <img src="https://i.imgur.com/z1xj4wV.png" alt="Series">  
+            <span>Series</span>  
+        </a>  
+        <a id="busqueda-tab" onclick="showSection('busqueda')">  
+            <img src="https://i.imgur.com/06eWlVP.png" alt="Búsqueda">  
+            <span>Búsqueda</span>  
+        </a>  
+    </div>  
 
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Películas y Series</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="navbar">
-        <a id="peliculas-tab" onclick="showSection('peliculas')">
-            <img src="https://i.imgur.com/ZDq91lv.png" alt="Películas">
-            <span>Películas</span>
-        </a>
-        <a id="series-tab" onclick="showSection('series')">
-            <img src="https://i.imgur.com/z1xj4wV.png" alt="Series">
-            <span>Series</span>
-        </a>
-        <a id="busqueda-tab" onclick="showSection('busqueda')">
-            <img src="https://i.imgur.com/06eWlVP.png" alt="Búsqueda">
-            <span>Búsqueda</span>
-        </a>
-    </div>
+    <!-- Sección de Películas -->  
+   <div id="peliculas" class="container active">  
+    <div class="gallery">  
+        <div class="item pelicula-card" onclick="showDetails('La Colombiana', 'Descripción de la película La Colombiana.', 'https://image.tmdb.org/t/p/original/2PlRuZUjqC58bqm6MOjOAraEdFA.jpg', 'https://image.tmdb.org/t/p/original/bx1Ka8DE0SDxJJHXOHmGICVr6ol.png', [], [], 'go:A')">  
+            <img src="https://image.tmdb.org/t/p/original/vUbVAT8CS6b4r7ZWQ6GpCj1qvGI.jpg" alt="La Colombiana" class="pelicula-imagen">  
+            <div class="pelicula-nombre">La Colombiana</div>  
+        </div>  
+        <div class="item pelicula-card" onclick="showDetails('Venom', 'Descripción de la película Venom.', 'https://image.tmdb.org/t/p/original/2PlRuZUjqC58bqm6MOjOAraEdFA.jpg', 'https://image.tmdb.org/t/p/original/bx1Ka8DE0SDxJJHXOHmGICVr6ol.png', [], [], 'go:B')">  
+            <img src="https://image.tmdb.org/t/p/original/vUbVAT8CS6b4r7ZWQ6GpCj1qvGI.jpg" alt="Venom" class="pelicula-imagen">  
+            <div class="pelicula-nombre">Venom</div>  
+        </div>  
+        <!-- Añade más películas según necesites -->  
+    </div>  
+</div>   
 
-    <!-- Sección de Películas -->
-    <div id="peliculas" class="container active">
-        <div class="gallery">
-            <div class="item" onclick="showDetails('La Colombiana', 'Descripción de la película La Colombiana.', 'https://image.tmdb.org/t/p/original/2PlRuZUjqC58bqm6MOjOAraEdFA.jpg', 'https://image.tmdb.org/t/p/original/bx1Ka8DE0SDxJJHXOHmGICVr6ol.png', [], [
-                'https://image.tmdb.org/t/p/original/kG7xLUDHfmxK5vkowFRCCeR09Ld.jpg',
-                'https://image.tmdb.org/t/p/original/kG7xLUDHfmxK5vkowFRCCeR09Ld.jpg'
-            ])">
-                <img src="https://image.tmdb.org/t/p/original/vUbVAT8CS6b4r7ZWQ6GpCj1qvGI.jpg" alt="La Colombiana">
-            </div>
-            <div class="item" onclick="showDetails('La Colombiana', 'Descripción de la película La Colombiana.', 'https://image.tmdb.org/t/p/original/2PlRuZUjqC58bqm6MOjOAraEdFA.jpg', 'https://image.tmdb.org/t/p/original/bx1Ka8DE0SDxJJHXOHmGICVr6ol.png', [], [
-                'https://image.tmdb.org/t/p/original/kG7xLUDHfmxK5vkowFRCCeR09Ld.jpg',
-                'https://image.tmdb.org/t/p/original/kG7xLUDHfmxK5vkowFRCCeR09Ld.jpg'
-            ])">
-                <img src="https://image.tmdb.org/t/p/original/vUbVAT8CS6b4r7ZWQ6GpCj1qvGI.jpg" alt="La Colombiana">
-            </div>
-          <div class="item" onclick="showDetails('La Colombiana', 'Descripción de la película La Colombiana.', 'https://image.tmdb.org/t/p/original/2PlRuZUjqC58bqm6MOjOAraEdFA.jpg', 'https://image.tmdb.org/t/p/original/bx1Ka8DE0SDxJJHXOHmGICVr6ol.png', [], [
-                'https://image.tmdb.org/t/p/original/kG7xLUDHfmxK5vkowFRCCeR09Ld.jpg',
-                'https://image.tmdb.org/t/p/original/kG7xLUDHfmxK5vkowFRCCeR09Ld.jpg'
-            ])">
-                <img src="https://image.tmdb.org/t/p/original/vUbVAT8CS6b4r7ZWQ6GpCj1qvGI.jpg" alt="La Colombiana">
-            </div>
-        </div>
-    </div>
+    <!-- Sección de Series -->  
+    <div id="series" class="container">  
+        <div class="gallery">  
+            <div class="item" onclick="showDetails('Full House', 'Descripción de la serie Full House.', 'https://image.tmdb.org/t/p/original/fAUZbXgPDirrt2IApLNDsca5O5B.jpg', 'https://image.tmdb.org/t/p/original/uMFvvQYCYaDD4j6GMiobUj0y4Ws.png', [  
+                { number: 1, imageUrl: 'https://image.tmdb.org/t/p/original/jA6d41pRiHcI78NG93ENdMYPexv.jpg' },  
+                { number: 2, imageUrl: 'https://image.tmdb.org/t/p/original/prm07DoL36a5UZA2XlHX9OuI19D.jpg' }  
+            ], [  
+                'https://image.tmdb.org/t/p/original/kG7xLUDHfmxK5vkowFRCCeR09Ld.jpg',  
+                'https://image.tmdb.org/t/p/original/kG7xLUDHfmxK5vkowFRCCeR09Ld.jpg'  
+            ])">  
+                <img src="https://image.tmdb.org/t/p/original/437jZdGXmYzyl9p4QtIFsm89rL5.jpg" alt="Full House">  
+            </div>  
+            <!-- Añade más series según necesites -->  
+        </div>  
+    </div>  
 
-    <!-- Sección de Series -->
-    <div id="series" class="container">
-        <div class="gallery">
-            <div class="item" onclick="showDetails('Full House', 'Descripción de la serie Full House.', 'https://image.tmdb.org/t/p/original/fAUZbXgPDirrt2IApLNDsca5O5B.jpg', 'https://image.tmdb.org/t/p/original/uMFvvQYCYaDD4j6GMiobUj0y4Ws.png', [
-                { number: 1, imageUrl: 'https://image.tmdb.org/t/p/original/jA6d41pRiHcI78NG93ENdMYPexv.jpg' },
-                { number: 2, imageUrl: 'https://image.tmdb.org/t/p/original/prm07DoL36a5UZA2XlHX9OuI19D.jpg' }
-            ], [
-                'https://image.tmdb.org/t/p/original/kG7xLUDHfmxK5vkowFRCCeR09Ld.jpg',
-                'https://image.tmdb.org/t/p/original/kG7xLUDHfmxK5vkowFRCCeR09Ld.jpg'
-            ])">
-                <img src="https://image.tmdb.org/t/p/original/437jZdGXmYzyl9p4QtIFsm89rL5.jpg" alt="Full House">
-            </div>
-            <!-- Añade más series según necesites -->
-        </div>
-    </div>
+    <!-- Sección de Detalles -->  
+    <div id="detalles" class="container">  
+        <div class="detalle-content">  
+            <div class="carousel">  
+                <div class="carousel-images">  
+                    <img id="detalle-imagen" src="" alt="Detalle Imagen" class="detalle-imagen">  
+                </div>  
+            </div>  
+            <img id="logo" src="" alt="Logo" class="logo">  
+            <p id="descripcion"></p>  
+            <div id="temporadas" class="temporadas"></div> <!-- Sección de temporadas -->  
+            <button id="reproducir-boton" onclick="reproducir()">Reproducir</button>  
+        </div>  
+    </div>  
 
-    <!-- Sección de Detalles -->
-    <div id="detalles" class="container">
-        <div class="detalle-content">
-            <div class="carousel">
-                <div class="carousel-images">
-                    <img id="detalle-imagen" src="" alt="Detalle Imagen" class="detalle-imagen">
-                </div>
-            </div>
-            <img id="logo" src="" alt="Logo" class="logo">
-            <p id="descripcion"></p>
-            <div id="temporadas" class="temporadas"></div> <!-- Sección de temporadas -->
-            <button id="reproducir-boton" onclick="reproducir()">Reproducir</button>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
-<!-- partial -->
-  <script  src="./script.js"></script>
-
-</body>
-</html>
-<!-- partial -->
-  <script  src="./script.js"></script>
-
-</body>
+    <script src="script.js"></script>  
+</body>  
 </html>
 <!-- partial -->
   <script  src="./script.js"></script>

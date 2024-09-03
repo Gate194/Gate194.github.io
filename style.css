@@ -158,3 +158,28 @@ html, body {
     margin: 0;
     padding: 0;
 }
+
+.pelicula-card {  
+    background-color: #121212; /* Dark background for the card */  
+    border-radius: 10px; /* Rounded corners */  
+    overflow: hidden; /* Prevent overflow */  
+    width: 200px; /* Fixed width for cards */  
+    text-align: center; /* Center-align text */  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0); /* Shadow effect */  
+    transition: transform 0.3s; /* Smooth scaling effect */  
+}  
+
+.pelicula-card:hover {  
+    transform: scale(1.05); /* Scale up on hover */  
+}  
+
+.pelicula-imagen {  
+    width: 100%; /* Image takes full width */  
+    border-radius: 10px 10px 0 0; /* Rounded top corners */  
+}  
+
+.pelicula-nombre {  
+    margin-top: 5px; /* Margin on top */  
+    font-size: 16px; /* Font size for the movie name */  
+    color: #ffffff; /* White color for text */  
+}
