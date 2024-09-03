@@ -18,6 +18,7 @@ body {
     position: fixed;
     bottom: 0;
     left: 0;
+    z-index: 1000; /* Barra de navegación al frente */
 }
 
 .navbar a {
@@ -141,6 +142,10 @@ button {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
 }
 
+.temporada-card:hover {  
+    transform: scale(1.05); /* Scale up on hover */  
+}  
+
 .temporada-imagen {
     width: 100%;
     border-radius: 10px;
@@ -166,7 +171,9 @@ html, body {
     width: 200px;
     text-align: center;
     padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+    z-index: 500; /* Tarjetas por debajo de la barra de navegación */
+    position: relative; /* Necesario para que el z-index funcione */
 }  
 
 .pelicula-card:hover {  
@@ -182,4 +189,40 @@ html, body {
     margin-top: 5px;
     font-size: 16px;
     color: #ffffff;
+}
+
+.serie-card {  
+    background-color: #121212;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+    z-index: 500; /* Tarjetas por debajo de la barra de navegación */
+    position: relative; /* Necesario para que el z-index funcione */
+}  
+
+.serie-card:hover {  
+    transform: scale(1.05); /* Scale up on hover */  
+}  
+
+.serie-imagen {  
+    width: 100%; /* Image takes full width */  
+    border-radius: 10px 
+}  
+
+.serie-nombre {  
+    margin-top: 5px; /* Margin on top */  
+    font-size: 16px; /* Font size for the series name */  
+    color: #ffffff; /* White color for text */  
+}
+
+/* Aplica a enlaces específicos, como los de temporadas */
+.temporada-card a,
+.temporada-card a:visited,
+.temporada-card a:hover,
+.temporada-card a:active {
+    color: #ffffff; /* Color blanco para los enlaces de temporadas */
+    text-decoration: none; /* Remueve el subrayado en todos los estados */
 }

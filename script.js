@@ -74,17 +74,23 @@ function showDetails(title, description, imageUrl, logoUrl, seasons = [], additi
         const temporadaCard = document.createElement('div');  
         temporadaCard.className = 'temporada-card';  
         
+        // Create a link for the season with a customizable reference  
+        const linkElement = document.createElement('a');  
+        linkElement.href = season.link || `go:${season.number}`;  // Use a custom link if provided  
+
         const temporadaImg = document.createElement('img');  
         temporadaImg.src = season.imageUrl;  
         temporadaImg.alt = `Temporada ${season.number}`;  
-        temporadaImg.className = 'temporada-imagen';  
+        temporadaImg.className = 'temporada-imagen';   
         
         const temporadaNombre = document.createElement('div');  
         temporadaNombre.className = 'temporada-nombre';  
         temporadaNombre.innerText = `Temporada ${season.number}`;  
-        
-        temporadaCard.appendChild(temporadaImg);  
-        temporadaCard.appendChild(temporadaNombre);  
+
+        // Append image and name to link  
+        linkElement.appendChild(temporadaImg);  
+        linkElement.appendChild(temporadaNombre);  
+        temporadaCard.appendChild(linkElement); // Add link to temporadaCard  
         
         temporadasContainer.appendChild(temporadaCard);  
     });  
