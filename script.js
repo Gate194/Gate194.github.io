@@ -108,5 +108,5 @@ function showDetails(title, description, imageUrl, logoUrl, seasons = [], additi
 }
 
 function reproducir() {
-    alert('Reproduciendo...');
+    window.location.href = "go:A"; // Redirige al enlace especificado
 }
