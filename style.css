@@ -13,7 +13,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    background-color: #333333;
+    background-color: #1e2d36;
     padding: 10px 0;
     position: fixed;
     bottom: 0;
@@ -36,6 +36,10 @@ body {
     display: block;
     margin: 0 auto 5px;
 }
+
+.navbar a img:hover {  
+    transform: scale(1.20); /* Scale up on hover */  
+}  
 
 .container {
     display: none;
@@ -109,7 +113,7 @@ body {
 
 button {
     padding: 10px 20px;
-    background-color: #ff5733;
+    background-color: #e2574c;
     color: white;
     border: none;
     border-radius: 5px;
@@ -119,6 +123,7 @@ button {
 
 #reproducir-boton {
     display: block; /* Mostrar por defecto */
+    margin: 30px;
 }
 
 #detalles.series #reproducir-boton {
@@ -225,4 +230,65 @@ html, body {
 .temporada-card a:active {
     color: #ffffff; /* Color blanco para los enlaces de temporadas */
     text-decoration: none; /* Remueve el subrayado en todos los estados */
+}
+
+#regresar-boton {
+    padding: 10px 20px;
+    background-color: #e2574c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: -15px;
+}
+
+#descripcion {
+    text-align: justify;
+    max-width: 700px; /* Define un ancho máximo */
+    margin: 10px; /* Centra la descripción si es más pequeña que el ancho máximo */
+}
+
+#regresar-series-boton {
+    padding: 10px 20px;
+    background-color: #e2574c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #e2574c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.search-bar button:hover {
+    background-color: #ff784e;
+}
+
+.navbar a.active-tab {
+    border-bottom: 3px solid #4c6572; /* Línea verde debajo del enlace */
+    color: #ffffff; /* Asegura que el texto se mantenga blanco */
 }

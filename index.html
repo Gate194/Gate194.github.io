@@ -8,6 +8,16 @@
 </head>
 <body>
 <!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Peliculas y Series</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
 <!DOCTYPE html>  
 <html lang="es">  
 <head>  
@@ -35,7 +45,7 @@
     <!-- Sección de Películas -->  
     <div id="peliculas" class="container active">  
         <div class="gallery">  
-            <div class="item pelicula-card" onclick="showDetails('La Colombiana', 'Descripción de la película La Colombiana.', 'https://image.tmdb.org/t/p/original/2PlRuZUjqC58bqm6MOjOAraEdFA.jpg', 'https://image.tmdb.org/t/p/original/bx1Ka8DE0SDxJJHXOHmGICVr6ol.png', [], [], 'go:A')">  
+            <div class="item pelicula-card" onclick="showDetails('La Colombiana', 'Colombia, 1992. Cataleya, una niña de nueve años, tras presenciar el asesinato de sus padres, se entrena para convertirse en una asesina profesional. Después de escapar a duras penas de la masacre, se refugia en los Estados Unidos con Emilio, un tío suyo mafioso. Quince años después, ya trabaja para él como asesina a sueldo. Su tarjeta de visita -una orquídea dibujada en el pecho de sus víctimas- es un mensaje para los asesinos de sus padres, pues Cataleya está resuelta a vengarlos cueste lo que cueste, aunque para ello tenga que sacrificar todo lo que ama.', 'https://image.tmdb.org/t/p/original/2PlRuZUjqC58bqm6MOjOAraEdFA.jpg', 'https://image.tmdb.org/t/p/original/bx1Ka8DE0SDxJJHXOHmGICVr6ol.png', [], [], 'go:A')">  
                 <img src="https://image.tmdb.org/t/p/original/vUbVAT8CS6b4r7ZWQ6GpCj1qvGI.jpg" alt="La Colombiana" class="pelicula-imagen">  
                 <div class="pelicula-nombre">La Colombiana</div>  
             </div>  
@@ -50,7 +60,7 @@
     <!-- Sección de Series -->  
 <div id="series" class="container">  
         <div class="gallery">  
-            <div class="item serie-card" onclick="showDetails('Full House', 'Descripción de la serie Full House.', 'https://image.tmdb.org/t/p/original/fAUZbXgPDirrt2IApLNDsca5O5B.jpg', 'https://image.tmdb.org/t/p/original/uMFvvQYCYaDD4j6GMiobUj0y4Ws.png', [  
+            <div class="item serie-card" onclick="showDetails('Full House', 'Tras la muerte de su esposa en un accidente de coche, Danny Tanner, un periodista de San Francisco, tiene que sacar adelante a sus tres hijas pequeñas: D.J., Stephanie y Michelle. Su cuñado Jesse y su mejor amigo, Joey, le ayudarán en la diaria y difícil tarea de criar, cuidar y educar a las niñas.', 'https://image.tmdb.org/t/p/original/fAUZbXgPDirrt2IApLNDsca5O5B.jpg', 'https://image.tmdb.org/t/p/original/uMFvvQYCYaDD4j6GMiobUj0y4Ws.png', [  
                 { number: 1, imageUrl: 'https://image.tmdb.org/t/p/original/jA6d41pRiHcI78NG93ENdMYPexv.jpg', link: 'go:T1fullhous' },  
                 { number: 2, imageUrl: 'https://image.tmdb.org/t/p/original/prm07DoL36a5UZA2XlHX9OuI19D.jpg', link: 'go:T2fullhous' }  
             ], [  
@@ -62,7 +72,16 @@
             </div>  
             <!-- Añade más series según necesites -->  
         </div>  
-    </div>   
+    </div>
+  
+  <!-- Sección de Búsqueda -->
+<div id="busqueda" class="container">
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="">
+        <button onclick="buscar()">Buscar</button>
+    </div>
+    <div id="search-results" class="gallery"></div>
+</div>
 
     <!-- Sección de Detalles -->  
     <div id="detalles" class="container">  
@@ -75,12 +94,19 @@
             <img id="logo" src="" alt="Logo" class="logo">  
             <p id="descripcion"></p>  
             <div id="temporadas" class="temporadas"></div> <!-- Sección de temporadas -->  
-            <button id="reproducir-boton" onclick="reproducir()">Reproducir</button>  
+            <button id="reproducir-boton" onclick="reproducir()">Reproducir</button>
+            <button id="regresar-boton" style="display: none;" onclick="regresar()">Regresar</button>
+<button id="regresar-series-boton" onclick="regresarASeries()" style="display: none;">Regresar</button>  
         </div>  
     </div>  
 
     <script src="script.js"></script>  
 </body>  
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
 </html>
 <!-- partial -->
   <script  src="./script.js"></script>

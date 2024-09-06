@@ -6,7 +6,19 @@ function showSection(sectionId) {
     sections.forEach(section => {  
         section.classList.remove('active');  
     });  
-    document.getElementById(sectionId).classList.add('active');  
+    document.getElementById(sectionId).classList.add('active');
+
+  // Eliminar la clase active-tab de todos los enlaces
+    const tabs = document.querySelectorAll('.navbar a');
+    tabs.forEach(tab => {
+        tab.classList.remove('active-tab');
+    });
+
+    // Añadir la clase active-tab al enlace correspondiente
+    const activeTab = document.querySelector(`#${sectionId}-tab`);
+    if (activeTab) {
+        activeTab.classList.add('active-tab');
+    }
 
     // Detener el carrusel si se está mostrando otra sección  
     clearInterval(slideInterval);  
@@ -99,7 +111,31 @@ function showDetails(title, description, imageUrl, logoUrl, seasons = [], additi
     const reproducirBoton = document.getElementById('reproducir-boton');  
     reproducirBoton.onclick = () => {  
         window.location.href = link || 'default_link';  
-    };  
+    };
+  
+  
+
+  // Mostrar botón "Regresar" solo si es una película (sin temporadas)
+    const regresarBoton = document.getElementById('regresar-boton');
+    if (seasons.length === 0) {
+        regresarBoton.style.display = 'block';
+        regresarBoton.onclick = () => {
+            showSection('peliculas'); // Regresar a la sección películas
+        };
+    } else {
+        regresarBoton.style.display = 'none';
+    }
+
+const regresarSeriesBoton = document.getElementById('regresar-series-boton');
+    if (seasons.length > 0) {
+        reproducirBoton.style.display = 'none';
+        regresarSeriesBoton.style.display = 'block';
+    } else {
+        reproducirBoton.style.display = 'block';
+        regresarSeriesBoton.style.display = 'none';
+    }
+  
+  
 
     // Ocultar botón "Reproducir" en la sección de series  
     reproducirBoton.style.display = seasons.length > 0 ? 'none' : 'block';  
@@ -114,4 +150,37 @@ function showDetails(title, description, imageUrl, logoUrl, seasons = [], additi
 
 function reproducir() {  
     // Esta función ya no es necesaria, el enlace se maneja en showDetails  
+}
+
+function regresarASeries() {
+    showSection('series');
+}
+
+function buscar() {
+    const query = document.getElementById('search-input').value.toLowerCase();
+    const resultsContainer = document.getElementById('search-results');
+    resultsContainer.innerHTML = ''; // Limpiar resultados anteriores
+
+    const peliculas = document.querySelectorAll('.pelicula-card');
+    const series = document.querySelectorAll('.serie-card');
+
+    // Filtrar películas y series que coincidan con la búsqueda
+    const resultados = [...peliculas, ...series].filter(item => {
+        const nombre = item.querySelector('.pelicula-nombre, .serie-nombre').textContent.toLowerCase();
+        return nombre.includes(query);
+    });
+
+    // Mostrar resultados
+    if (resultados.length === 0) {
+        resultsContainer.innerHTML = '<p>No se encontraron resultados</p>';
+    } else {
+        resultados.forEach(item => {
+            // Clonar el elemento encontrado para que no se modifique el original
+            const clon = item.cloneNode(true);
+            resultsContainer.appendChild(clon);
+        });
+    }
+
+    // Mostrar la sección de búsqueda con los resultados
+    showSection('busqueda');
 }
